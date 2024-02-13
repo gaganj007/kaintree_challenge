@@ -1,19 +1,19 @@
 # kaintree_challenge
 
 ## Setting Up and Running the Application
--A Prerequisites:
+-Prerequisites:
 
      - Python installed on your system.
      - Django and Django REST Framework installed in your virtual environment. Use pip install django djangorestframework.
-      -Setting Up the Project:
-
--A  Clone the project repository.
-      -Navigate into the project directory.
+-Setting Up the Project:
+     
+     - Clone the project repository
+     - Navigate into the project directory.
      - Create a virtual environment: python -m venv venv.
-      -Activate the virtual environment: On Windows, venv\Scripts\activate; on macOS/Linux, source venv/bin/activate.
-      -Install dependencies: pip install -r requirements.txt.
+     - Activate the virtual environment: On Windows, venv\Scripts\activate; on macOS/Linux, source venv/bin/activate.
+     - Install dependencies: pip install -r requirements.txt.
       
--A Running the Application:
+-Running the Application:
 
     - Apply migrations: python manage.py migrate.
     - Run the server: python manage.py runserver.
