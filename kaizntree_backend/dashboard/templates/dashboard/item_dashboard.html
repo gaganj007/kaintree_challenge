@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="item-dashboard">
+    <h1>Item Dashboard</h1>
+    <button>New Item Category</button>
+    <div>Total Categories: {{ items|length }}</div>
+    <div>Total Items: {{ items|length }}</div>
+    <table>
+        <thead>
+            <tr>
+                <th>SKU</th>
+                <th>Name</th>
+                <th>Tags</th>
+                <th>Category</th>
+                <th>In Stock</th>
+                <th>Available Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.sku }}</td>
+                <td>{{ item.name }}</td>
+                <td>{% for tag in item.tags.all %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+                <td>{{ item.category.name }}</td>
+                <td>{{ item.in_stock }}</td>
+                <td>{{ item.available_stock }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No items found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
